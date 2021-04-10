@@ -21,8 +21,8 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
   res.render('index', {
-    title: 'Weather App',
-    name: 'Andrew Bitch'
+    title: 'Времето днес със синоптик Радина Добринска',
+    name: 'Напиши мястото където искаш да видиш времето приперно: Дупница'
   })
 })
 

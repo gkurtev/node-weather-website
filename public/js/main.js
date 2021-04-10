@@ -6,15 +6,15 @@ if (form) {
 
     const input = document.querySelector('.js-input')
     const inputVal = input.value
-
-    console.log(inputVal);
+    const responseText = document.querySelector('.js-response-text')
 
     fetch('/weather?address=' + inputVal).then((response) => {
       response.json().then((data) => {
         if (data.error) {
-          console.log('error');
+          responseText.innerHTML = 'Греда, не уцели, няма такова нещо :('
         } else {
           console.log(data);
+          responseText.innerHTML = `<div>Място: ${data.location}</div><div>Прогноза: ${data.forecast}</div>`
         }
       })
     })
