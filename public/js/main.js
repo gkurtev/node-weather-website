@@ -9,7 +9,7 @@ form.addEventListener('submit', (e) => {
 
   console.log(inputVal);
 
-  fetch('http://localhost:4000/weather?address=' + inputVal).then((response) => {
+  fetch('/weather?address=' + inputVal).then((response) => {
     response.json().then((data) => {
       if (data.error) {
         console.log('error');
